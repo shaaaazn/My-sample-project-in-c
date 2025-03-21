@@ -27,3 +27,41 @@ int main() {
     return 0;
 }
 //MY FIRST CAlCI PROGRAM
+
+
+
+//TEMPERATURE CONVERTER
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float temp,convertedtemp;
+    printf("Enter the choice:\n 1.celsius to fahrenheit\n 2.celsius to kelvin\n 3.kelvin to fahrenheit\n");
+    scanf("%d",&choice);
+    printf("enter the temp:\n");
+    scanf("%f", &temp);
+    switch(choice)
+     {
+         case 1:
+         convertedtemp = (temp*9/5) + 32;
+         printf("%.2f celsius = %.2f fahrenheit",temp,convertedtemp);
+         break;
+         
+         case 2:
+         convertedtemp = temp + 273.15;
+         printf("%.2f celsius = %.2f kelvin",temp,convertedtemp);
+         break;
+         
+         case 3:
+         convertedtemp = ((temp - 273.15)*9/5) + 32;
+         printf("%.2f celsius = %.2f kelvin",temp,convertedtemp);
+         break;
+         
+         default:
+         printf("wrong choice");
+         break;
+     }
+     printf("\n");
+    return 0;
+}
+ 
