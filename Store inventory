@@ -1,0 +1,22 @@
+// Inventory in the store
+#include<stdio.h>
+#define Max_product 4
+ int main()
+ {
+     int inventory[Max_product];
+     char productnames[Max_product][50];
+     
+     printf("Enter 4 name and quantity of the product\n");
+    for(int i=0;i<Max_product;i++)
+    {
+        printf("Enter the name of the product %d:\n",i+1);
+        scanf("%s",productnames[i]);
+        printf("Enter th quantity of %s:",productnames[i]);
+        scanf("%d",&inventory[i]);
+    }
+    printf("\nstore inventory\n");
+    for(int i=0;i<Max_product;i++)
+    {
+        printf("product:%s , Quantity:%d\n",productnames[i],inventory[i]);
+    }
+ }
